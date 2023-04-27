@@ -1,12 +1,19 @@
 import React from 'react'
 import ChallengeCard from '../ChallengeCard'
-
+import challenges from '../../Challenges'
 
 function ChallengeList() {
   return (
-    <footer>
-      <p>Footer</p>
-    </footer>
+    <div>
+      {challenges.map((challenge, index) => (
+        <ChallengeCard
+          key={index}
+          title={challenge.title}
+          description={challenge.description}
+          solution={challenge.solution}
+        />
+      ))}
+    </div>
   )
 }
 

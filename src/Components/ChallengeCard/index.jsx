@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/webpack-resolver";
 
 const ChallengeCard = ({ title, description, solution }) => {
   const [showSolution, setShowSolution] = useState(false);
@@ -14,7 +15,7 @@ const ChallengeCard = ({ title, description, solution }) => {
         mode="javascript"
         theme="monokai"
         readOnly={true}
-        value={showSolution ? solution : null}
+        value={showSolution ? solution : ""}
         width="100%"
         height="300px"
       />
