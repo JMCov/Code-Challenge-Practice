@@ -1,10 +1,11 @@
 import React from 'react'
 import ChallengeCard from '../ChallengeCard'
 import challenges from '../../Challenges'
+import './styles.css'
 
 function ChallengeList() {
   return (
-    <div>
+    <div className='card-container'>
       {challenges.map((challenge, index) => (
         <ChallengeCard
           key={index}
